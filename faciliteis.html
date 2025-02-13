@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Facilities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .facilities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .facility {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .facility img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .facility-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .facility-content h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .facility-content p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our School Facilities</h1>
+        <p>Explore the top-notch facilities that enhance learning and extracurricular activities for our students.</p>
+    </header>
+
+    <div class="facilities-container">
+        <div class="facility">
+            <img src="library.jpg" alt="Library">
+            <div class="facility-content">
+                <h3>Modern Library</h3>
+                <p>Equipped with thousands of books, digital resources, and a quiet study space.</p>
+            </div>
+        </div>
+
+        <div class="facility">
+            <img src="sports-complex.jpg" alt="Sports Complex">
+            <div class="facility-content">
+                <h3>Sports Complex</h3>
+                <p>A large gymnasium and fields for various sports activities and events.</p>
+            </div>
+        </div>
+
+        <div class="facility">
+            <img src="computer-lab.jpg" alt="Computer Lab">
+            <div class="facility-content">
+                <h3>Computer Laboratory</h3>
+                <p>High-speed internet and modern computers for IT and programming classes.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

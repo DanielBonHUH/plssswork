@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosales National High School</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            background: linear-gradient(to bottom, #000000, #333333); /* Black gradient */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: #000000; /* Black background for the header */
+            color: white;
+            padding: 15px 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background-image: url('rnhsbldg.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 255, 0.3);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: #f9b233;
+        }
+
+        .hero-content button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f9b233;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-content button:hover {
+            background-color: #e69c1e;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .feature {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 250px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .feature:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .feature a {
+            text-decoration: none;
+            color: #f9b233;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .feature a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hidden Content Styling */
+        .hidden-content {
+            display: none;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            color: white;
+            margin: 20px auto;
+            width: 80%;
+            text-align: center;
+        }
+
+        /* Fade-in Animation */
+        .fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="resume.html">Kevin Angel C. Chan</a>
+            </div>
+            <nav>
+                <a href="WEB.html">Home</a>
+                <a href="Strand4.html">Strands</a>
+                <a href="events.html">Events</a>
+                <a href="facilities2.html">Facilities</a>
+                <a href="faculty.html">Faculty And Staff</a>
+                <a href="missyon.html">Mission</a>
+                <a href="visyon.html">  Vision</a>
+                <a href="corevalyou.html">Core Value</a>
+                <a href="stg.html">Students Guide</a>
+                <a href="index.html">Log Out</a>
+               
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Rosales National High School: <span>Shaping Future Leaders</span></h1>
+        </div>
+    </section>
+
+   
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty and Staff</title>
+  <style>
+    /* Background Animation */
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      background: linear-gradient(270deg, #1e3c72, #2a5298, #4a90e2, #6fa3ef);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Square image container using aspect-ratio */
+    .image-container {
+      width: 80%;
+      max-width: 800px;
+      aspect-ratio: 1 / 1; /* Height will equal width */
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 2s ease-in-out;
+      cursor: pointer;
+    }
+
+    /* Make the image fill the container */
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Glow Effect on Hover */
+    .image-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .image-container:hover::after {
+      opacity: 1;
+    }
+
+    /* Modal (Lightbox) Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 900px;
+      animation: fadeIn 0.5s ease-in-out;
+      border-radius: 15px;
+      margin-top: 5%;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 90%;
+      }
+      .close {
+        top: 20px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Faculty and Staff</h1>
+  
+  <!-- Image Container -->
+  <div class="image-container" onclick="openModal()">
+    <img src="4c6839d5-e869-4b01-807c-cc2c18a7ecd0.jpg" alt="Faculty and Staff" />
+  </div>
+
+  <!-- Modal for Full-Size View -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <script>
+    function openModal() {
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      var img = document.querySelector(".image-container img");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      var modal = document.getElementById("imageModal");
+      modal.style.display = "none";
+    }
+
+    // Prevent closing modal when clicking on the image itself
+    document.getElementById("modalImage").onclick = function(event) {
+      event.stopPropagation();
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Map</title>
+    <style>
+        /* Animated Blue Background */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #0f4c75, #3282b8, #0f4c75, #3282b8);
+            background-size: 400% 400%;
+            animation: gradientAnimation 8s ease infinite;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Header */
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Grid Layout for Images */
+        .map-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            justify-content: center;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Clickable Images */
+        .map-container a {
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .map-container img {
+            width: 384px; /* 4 inches */
+            height: 384px; /* 4 inches */
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+        }
+
+        /* Hover Effect */
+        .map-container a:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .map-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .map-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <h1>School Map</h1>
+    </div>
+
+  
+    <div class="map-container">
+        <a href="location1-details.html" target="_blank">
+            <img src="location1.jpg" alt="Location 1">
+        </a>
+        <a href="location2-details.html" target="_blank">
+            <img src="location2.jpg" alt="Location 2">
+        </a>
+        <a href="location3-details.html" target="_blank">
+            <img src="location3.jpg" alt="Location 3">
+        </a>
+        <a href="location4-details.html" target="_blank">
+            <img src="location4.jpg" alt="Location 4">
+        </a>
+        <a href="location5-details.html" target="_blank">
+            <img src="location5.jpg" alt="Location 5">
+        </a>
+        <a href="location6-details.html" target="_blank">
+            <img src="location6.jpg" alt="Location 6">
+        </a>
+        <a href="location7-details.html" target="_blank">
+            <img src="location7.jpg" alt="Location 7">
+        </a>
+        <a href="location8-details.html" target="_blank">
+            <img src="location8.jpg" alt="Location 8">
+        </a>
+    </div>
+
+</body>
+</html>

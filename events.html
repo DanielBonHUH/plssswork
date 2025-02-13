@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #3b82f6, #9333ea);
+            overflow-x: hidden;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .events-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.1); /* Transparent background */
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 320px;
+            height: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeIn 1s forwards ease-out;
+            padding: 20px;
+        }
+
+        .event-card:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .event-card:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .event-card:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        .event-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .event-card p {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Background Animation */
+        .floating-bg {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .floating-bg:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            animation-duration: 10s;
+        }
+
+        .floating-bg:nth-child(2) {
+            bottom: 15%;
+            right: 10%;
+            animation-duration: 12s;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        🎉 School Events 🎉
+    </header>
+
+    <div class="events-container">
+        <div class="floating-bg"></div>
+        <div class="floating-bg"></div>
+
+        <div class="event-card">
+            <h3>🏆 Sports Festival</h3>
+            <p>A week-long event where students compete in various sports and games.</p>
+        </div>
+
+        <div class="event-card">
+            <h3>🔬 Science Fair</h3>
+            <p>Showcase your creativity and innovation in our annual Science Fair!</p>
+        </div>
+
+        <div class="event-card">
+            <h3>🎓 Graduation Ceremony</h3>
+            <p>Celebrate the achievements of our graduating students in a memorable ceremony.</p>
+        </div>
+
+        <div class="event-card">
+            <h3>🛍️ School Bazaar</h3>
+            <p>Students will sell their handmade products as part of the curriculum and entrepreneurship skills.</p>
+        </div>
+    </div>
+
+</body>
+</html>
